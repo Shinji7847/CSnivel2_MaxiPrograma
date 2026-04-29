@@ -4,14 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using Dominio;
 
-namespace Win_Forms_App
+namespace Negocio
 {
-    class PokemonNegocio
+    public class PokemonNegocio
     {
         public List<Pokemon> listar()
         {
             List<Pokemon> lista = new List<Pokemon>();
+
+            //Desde acá arranca clase AccesoDatos...
+
             SqlConnection conexion = new SqlConnection();
             SqlCommand comando = new SqlCommand();
             SqlDataReader lector;
@@ -25,6 +29,8 @@ namespace Win_Forms_App
 
                 conexion.Open();
                 lector = comando.ExecuteReader();
+        
+                //Hasta acá llega clase AccesoDatos
 
                 while (lector.Read())
                 {
@@ -42,6 +48,9 @@ namespace Win_Forms_App
                 }
 
                 conexion.Close();
+
+                //Hasta acá llega clase AccesoDatos... sin el while.
+
                 return lista;
             }
             catch (Exception ex)
@@ -49,6 +58,26 @@ namespace Win_Forms_App
 
                 throw ex;
             }
+        }
+
+        public void agregar(Pokemon nuevo)
+        {
+
+        }
+
+        public void modificar(Pokemon modifica)
+        {
+
+        }
+
+        public void quitarLogico(Pokemon quitaLogico)
+        {
+
+        }
+
+        public void quitarFisico(Pokemon quitaFisico)
+        {
+
         }
     }
 }

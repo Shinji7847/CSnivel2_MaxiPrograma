@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
 
-namespace Win_Forms_App
+namespace Gestor_de_Comercio_App
 {
     static class Program
     {
@@ -13,10 +14,10 @@ namespace Win_Forms_App
         /// </summary>
         [STAThread]
         static void Main()
-        {
+        { 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPokemon());
+            Application.Run(new FormGestorComercio());
         }
     }
 }

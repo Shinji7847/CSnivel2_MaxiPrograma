@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8CC703FD-DE44-40CA-8685-2AB9016F15D8}</ProjectGuid>
+    <ProjectGuid>{1FC51301-EB84-4E53-8C3B-FBCAC6ABA6E6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Win_Forms_App</RootNamespace>
-    <AssemblyName>Win-Forms-App</AssemblyName>
+    <RootNamespace>Gestor_de_Comercio_App</RootNamespace>
+    <AssemblyName>Gestor_de_Comercio_App</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormGestorComercio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormGestorComercio.Designer.cs">
+      <DependentUpon>FormGestorComercio.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormGestorComercio.resx">
+      <DependentUpon>FormGestorComercio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -80,13 +80,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dominio\Dominio.csproj">
-      <Project>{dcd65d35-4281-49d0-9aeb-a479e21085f2}</Project>
-      <Name>Dominio</Name>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
+      <Project>{635467fc-33f7-4453-a291-b742130037ce}</Project>
+      <Name>CapaDatos</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Negocio\Negocio.csproj">
-      <Project>{a8eda554-3172-4d93-941f-f53daebcf291}</Project>
-      <Name>Negocio</Name>
+    <ProjectReference Include="..\CapaDominio\CapaDominio.csproj">
+      <Project>{d03be491-e8af-47fe-aae2-b33326b62a07}</Project>
+      <Name>CapaDominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
+      <Project>{2ce904a9-6d9a-4636-a82b-31a8475b8a1d}</Project>
+      <Name>CapaNegocio</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,14 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dominio;
+using Negocio;
 
 namespace Win_Forms_App
 {
-    public partial class Form1 : Form
+    public partial class FormPokemon : Form
     {
         private List<Pokemon> listaPokemon; //Lista para manipular en la ajecucion de la ventana
 
-        public Form1()
+        public FormPokemon()
         {
             InitializeComponent();
         }

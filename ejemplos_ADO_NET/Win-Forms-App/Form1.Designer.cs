@@ -1,6 +1,6 @@
 ﻿namespace Win_Forms_App
 {
-    partial class Form1
+    partial class FormPokemon
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -37,29 +37,30 @@
             // dgvPokemons
             // 
             this.dgvPokemons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPokemons.Location = new System.Drawing.Point(12, 31);
+            this.dgvPokemons.Location = new System.Drawing.Point(3, 31);
             this.dgvPokemons.Name = "dgvPokemons";
+            this.dgvPokemons.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPokemons.Size = new System.Drawing.Size(533, 313);
             this.dgvPokemons.TabIndex = 0;
             this.dgvPokemons.SelectionChanged += new System.EventHandler(this.dgvPokemons_SelectionChanged);
             // 
             // pbPokemons
             // 
-            this.pbPokemons.Location = new System.Drawing.Point(551, 31);
+            this.pbPokemons.Location = new System.Drawing.Point(542, 31);
             this.pbPokemons.Name = "pbPokemons";
-            this.pbPokemons.Size = new System.Drawing.Size(439, 312);
+            this.pbPokemons.Size = new System.Drawing.Size(352, 313);
             this.pbPokemons.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPokemons.TabIndex = 2;
             this.pbPokemons.TabStop = false;
             // 
-            // Form1
+            // FormPokemon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 354);
+            this.ClientSize = new System.Drawing.Size(908, 383);
             this.Controls.Add(this.pbPokemons);
             this.Controls.Add(this.dgvPokemons);
-            this.Name = "Form1";
+            this.Name = "FormPokemon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pokemons";
             this.Load += new System.EventHandler(this.Form1_Load);
