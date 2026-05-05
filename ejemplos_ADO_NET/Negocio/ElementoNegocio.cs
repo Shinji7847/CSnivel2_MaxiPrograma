@@ -15,7 +15,17 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta();
+                datos.setearConsulta("select Id, Descripcion from ELEMENTOS");
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Elemento aux = new Elemento();
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+
+                    listaElemento.Add(aux);
+                }
 
                 return listaElemento;
             }
@@ -23,7 +33,11 @@ namespace Negocio
             {
 
                 throw ex;
-            } 
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
         }
     }
 }

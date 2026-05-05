@@ -65,5 +65,11 @@ namespace Win_Forms_App
                 pbPokemons.Load("https://tse2.mm.bing.net/th/id/OIP.sWCvltMZF_s3mjA5sL-RdgHaE8?pid=Api&P=0&h=180");
             }
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            FormAltaPokemon alta = new FormAltaPokemon();
+            alta.ShowDialog();
+        }
     }
 }
